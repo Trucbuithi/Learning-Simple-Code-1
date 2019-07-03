@@ -7,3 +7,20 @@ def myfunc(x):
         else:
             out.append(x[i].upper())
     return ''.join(out)
+
+
+#print Hello World
+def myfunc():
+    print ('hello world')
+    
+#sum()
+def myfunc(*args):
+    return sum(args)
+    
+#pick even numbers
+def myfunc(*args):
+    out = []
+    for num in args:
+        if num%2==0:
+            out.append(num)
+    return out
