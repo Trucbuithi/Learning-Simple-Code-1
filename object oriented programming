@@ -35,3 +35,36 @@ class Cylinder(object):
     def surface_area(self):
         top = 3.14 * (self.radius)**2
         return (2*top) + (2*3.14*self.radius*self.height)
+        
+        
+For this challenge, create a bank account class that has two attributes:
+owner
+balance
+and two methods:
+deposit
+withdraw
+As an added requirement, withdrawals may not exceed the available balance.
+Instantiate your class, make several deposits and withdrawals, and test to make sure the account can't be overdrawn.
+
+class Account(object):
+    
+    def __init__(self,owner,balance):
+        self.owner=owner
+        self.balance=balance
+    def __str__(self):
+        print('Account owner: {}  \nAccount balance: {} '.format(self.owner, self.balance)
+         
+    def deposit(self,dep_amt):
+        self.balance += dep_amt
+        print('Deposit Accepted')
+        
+    def withdraw(self,wd_amt):
+        if self.balance >= wd_amt:
+            self.balance -= wd_amt
+            print('Withdrawal Accepted')
+        else:
+            print('Funds Unavailable!')
+    
+    
+        
+
